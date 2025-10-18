@@ -1,0 +1,265 @@
+:root {
+    --bg: #e8eaed;
+    --white: #fff;
+    --panel: #12151a;
+    --primary: #0b0c10;
+    --muted: #9aa0a6;
+    --nav: #202020;
+    --brand: #4f8cff;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font: 16px "Share Tech", sans-serif;
+    color: var(--primary);
+    background: var(--bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.menu-container a {
+    padding: 0 1rem;
+    color: var(--muted);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-container a:hover {
+    color: var(--brand);
+    transform: translateY(-2px);
+}
+
+
+.menu-container a {
+    padding: 0 1rem;
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 15rem 1rem;
+    gap: 1rem;
+}
+
+.hero-content {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero p {
+    color: var(--primary);
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 1px solid #2a2f37;
+    color: var(--primary);
+    transition: background 0.2s ease, color 0.2s ease, transforms 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--brand);
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background: var(--nav);
+    color: var(--bg);
+    border: none;
+    transition: background 0.2s ease, color 0.2s ease, transforms 0.2s ease;
+    cursor: pointer;
+}
+.btn.primary:hover{
+    background: var(--bg);
+    border: 1px solid var(--nav);
+    color: var(--nav);
+    transform: translateY(-2px);
+
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 1rem;
+    gap: 1rem;
+    background: var(--bg);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.card {
+    height: 50vh;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card.apple {
+    background: #f5f5f7;
+    color: #000;
+}
+
+.card.google {
+    background: #4285F4;
+    color: #fff;
+}
+
+.card.xiaomi {
+    background: #ff6900;
+    color: #fff;
+}
+
+.card.nothing {
+    background: #000;
+    color: #fff;
+}
+
+.card.oneplus {
+    background: #eb0029;
+    color: #fff;
+}
+
+.card.samsung {
+    background: #1428a0;
+    color: #fff;
+}
+
+.card.oppo {
+    background: #00a884;
+    color: #fff;
+}
+
+.card.huawei {
+    background: #d9232d;
+    color: #fff;
+}
+
+.site-footer {
+    background: var(--bg);
+    padding: 2rem;
+    text-align: center;
+
+    color: #333;
+}
+
+.site-footer section {
+    flex: 1 1 180px;
+    gap: 1rem;
+}
+
+.site-footer h2 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer li {
+    margin-bottom: 0.3rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.site-footer a:hover {
+    color: var(--brand);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1200px;
+}
+
+.footer-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero p{
+        max-width: 45ch;
+    }
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
